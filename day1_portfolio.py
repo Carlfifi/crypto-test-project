@@ -5,22 +5,21 @@ btc_price = 6235.75  #假设的BTC当前价格
 # 2. 使用字典创建资产组合（这是金融数据的关键结构
 
 crypto_portfolio = {
-    'BTC': {
-        "holding": 0.85,  # 持有数量
-        "buy_price": 58000.00,  # 买入均价
-        "current_price": btc_price
+    "BTC": {
+        "holding": 0.85,
+        "buy_price": 58000.00,
+        "current_price": 89701  # 更新为API获取的真实价格
     },
-"ETH": {
+    "ETH": {
         "holding": 5.2,
         "buy_price": 3200.00,
-        "current_price": 3450.50
+        "current_price": 3021.63  # 更新为API获取的真实价格
     },
-"USDT": {
+    "USDT": {
         "holding": 1000.0,
         "buy_price": 1.0,
         "current_price": 1.0
     }
-
 }
 
 # 3. 计算并打印每种资产的盈亏情况
