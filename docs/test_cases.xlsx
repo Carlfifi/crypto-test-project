@@ -13,3 +13,16 @@ TC-BUY-003	模拟交易-买入	验证输入无效数量（负数）时能否妥善报错	"1. 已登录Paper 
 4. 尝试点击 BUY 按钮"	"1. 前端交互：BUY按钮变为灰色不可点击，交易被阻止。
 2. 错误提示：金额框显示：“Specified amount is less than the symbol minimum of 0.0001”
 3. 数据层面：现金(Cash)和持仓(Positions)无任何变动。"	Pass	异常测试通过。系统通过前端交互（按钮禁用）和明确提示进行了双重拦截。但提示语更偏向“小于最小值”而非“不能为负”，存在优化空间。
+TC-BUY-002	模拟交易-买入	验证买入数量为0时的系统处理	"1. 已登录Paper Trading
+ 2. 账户现金 >= $100"	"1. 选择BTCUSD
+2. 类型Market
+3. 数量输入0
+4. 点击BUY"	"1. 前端交互：BUY按钮变为灰色不可点击，交易被阻止。
+2. 错误提示：金额框显示：“Specified amount is less than the symbol minimum of 0.0001”
+3. 数据层面：现金(Cash)和持仓(Positions)无任何变动。"	PASS	边界值测试：0是正负数的边界
+TC-BUY-004	模拟交易-买入	验证买入数量超出账户购买力时的系统处理	"1. 已登录
+2. 现金为$CASH"	"1. 选择BTCUSD
+2. 类型Market
+3. 数量输入1000000
+4. 点击BUY"	"1. 订单被拒绝，并弹出明确提示：“Not enough funds to complete the order. The required margin exceeds your available funds.”
+2. 现金和持仓无任何变动."	PASS	
