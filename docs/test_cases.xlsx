@@ -31,14 +31,17 @@ TC-SELL-001	模拟交易-卖出	验证卖出全部持仓（市价单）	"1. 已登录
 2. 类型 Market
 3. 数量输入 0.001
 4. 点击 SELL"	"1. 持仓减少 0.001 BTC
-2. 现金相应增加
-3. 订单历史有记录"	pass	正向用例：清空持仓
+2. 现金相应增加80美元
+3. 订单历史有记录，状态为filled"	pass	正向用例：清空持仓
 TC-SELL-002	模拟交易-卖出	验证卖出数量超过持仓时的处理	"1. 已登录
 2. 持仓有 0.001 BTC"	"1. 选择 BTCUSD
 2. 类型 Market
 3. 数量输入 0.002
 4. 点击 SELL"	"1. 订单被拒绝
-2. 给出明确错误提示（如“数量超过持仓”）
+2. 给出明确错误提示（Market order rejected on
+BITSTAMP:BTCUSD
+Buy 1,000,000
+Not enough funds to complete the order. The required margin exceeds your available funds.）
 3. 现金与持仓不变"	pass	异常测试：卖空检查
 TC-LIMIT-001	模拟交易-限价单	验证限价买单（低于市价）可成功挂单	1. 已登录，有现金	"1. 选择 BTCUSD
 2. 类型 Limit
