@@ -10,12 +10,18 @@
 *   **测试计划**与报告编写
 
 ## 📁 项目结构
-futu-crypto-test-project/
+crypto-test-project/
 ├── day1_hello.py # 环境验证
 ├── day1_portfolio.py # 资产组合模拟器（核心数据结构）
 ├── day2_api.py # 加密货币实时价格API调用（含异常处理）
+├── docs/ # 测试文档目录
+│ ├── test_plan.md
+│ ├── test_cases.xlsx
+│ ├── exploratory_notes.md
+│ └── test_summary_report.md
 ├── README.md # 本项目说明文件
 └── .gitignore
+
 
 
 ## 🚀 快速开始
@@ -25,9 +31,11 @@ futu-crypto-test-project/
 
 ## 🔧 技术栈
 *   **语言**: Python
-*   **工具**: PyCharm, Git, Postman
-*   **测试**: API测试（Requests库），自动化断言
+*   **工具**: PyCharm, Git, Postman, TradingView Paper Trading
+*   **测试**: 测试用例设计、API测试（Requests库）、探索性测试、金融业务专项测试（数据一致性、状态机、风控机制）
 
 ## 📈 进度日志
 *   **Day 1 & 2**: 完成Python基础、资产组合模拟、CoinGecko API集成。
-*   **Day 3**: 项目仓库建立，开始接口测试学习。
+*   **Day 3**: 项目仓库建立，掌握Postman接口测试与断言。
+*   **Day 4**: 选定TradingView模拟交易为测试对象，完成测试计划与买入功能深度测试。
+*   **Day 5**: 完成卖出、限价单功能测试，输出完整的测试总结报告与项目回顾。
